@@ -1,0 +1,21 @@
+/* default styles */
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+
+* {
+    /* this makes it so that adjusting padding/margin doesn't affect the width */
+    box-sizing: border-box;
+}
+
+body {
+    /* default font */
+    font-family: 'Muli', sans-serif;
+    /* default layout */
+    display: flex;
+    align-items: center;
+    /* need height for the layout to work */
+    justify-content: center;
+    height: 100vh;
+    /* overflow to hide the scrollbars */
+    overflow: hidden;
+    margin: 0;
+}
