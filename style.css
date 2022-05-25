@@ -82,3 +82,23 @@ body {
     /* when we click a button, we want it to transition */
     transition: 0.4s ease;
 }
+
+.circle {
+    /* this makes the space behind the numbers white */
+    background-color: white;
+    /* color of the circle */
+    color: #999;
+    /* circle should be rounded */
+    border-radius: 50%;
+    /* create circle, width and height */
+    width: 2rem;
+    height: 2rem;
+    /* center numbers inside the circles */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* create border around circles */
+    border: 3px outset #e0e0e0;
+    /* create transition */
+    transition: 1s ease;
+}
