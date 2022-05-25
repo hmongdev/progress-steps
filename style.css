@@ -19,3 +19,25 @@ body {
     overflow: hidden;
     margin: 0;
 }
+
+.container {
+    text-align: center;
+}
+
+.progress-container {
+    display: flex;
+    /* creates space between the numbers */
+    justify-content: space-between;
+    /* relative to position other things inside of it absolute */
+    position: relative;
+    /* margin bottom to push it away from the buttons */
+    margin-bottom: 2rem;
+    /* take up the entire width */
+    max-width: 100%;
+    border: 1px dashed red;
+    /* make the width: */
+    width: 350px;
+     
+
+
+}
