@@ -6,6 +6,13 @@
     box-sizing: border-box;
 }
 
+/* define custom properties (variables) */
+/* root scope */
+:root {
+    --line-border-fill: #3498db;
+    --line-border-empty: #e0e0e0;
+}
+
 body {
     /* default font */
     font-family: 'Muli', sans-serif;
@@ -45,7 +52,7 @@ body {
     /* we don't see anything because whenever we use ::before, we need content: '' */
     content: '';
     /* color of the progress bar */
-    background-color: #e0e0e0;
+    background-color: var(--line-border-empty);
     /* this is absolutely positioned relative to progress container */
     position: absolute;
     /* move progress bar to the center */
@@ -65,7 +72,7 @@ body {
 /* progress bar */
 .progress-bar {
     /* color of the progress bar */
-    background-color: #3498db;
+    background-color: var(--line-border-fill);
     /* this is absolutely positioned relative to progress container */
     position: absolute;
     /* move progress bar to the center */
@@ -86,8 +93,8 @@ body {
 .circle {
     /* this makes the space behind the numbers white */
     background-color: white;
-    /* color of the circle */
-    color: #999;
+    /* color of the numbers */
+    color: white;
     /* circle should be rounded */
     border-radius: 50%;
     /* create circle, width and height */
@@ -98,7 +105,12 @@ body {
     align-items: center;
     justify-content: center;
     /* create border around circles */
-    border: 3px outset #e0e0e0;
+    border: 5px inset var(--line-border-empty);
     /* create transition */
-    transition: 1s ease;
+    transition: 0.4s ease;
+}
+
+/* what happens with the active circle */
+.circle.active {
+    background-color: var(--line-border-fill);
 }
