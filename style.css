@@ -114,3 +114,23 @@ body {
 .circle.active {
     background-color: var(--line-border-fill);
 }
+
+/* button styling */
+.btn {
+    background-color: var(--line-border-fill);
+    /* font: white */
+    color: white;
+    /* make corners rounded */
+    border-radius: 15px;
+    /* default sizing */
+    font-size: 1rem;
+    height: 2rem;
+    width: 4rem;
+    /* when hovering, make the pointer a cursor */
+    cursor: pointer;
+    /* inherits font from parent element */
+    /* it would inherit from <body> and have the Muli font */
+    font-family: inherit;
+    /* spacing away from other elements */
+    margin: 1rem;
+}
