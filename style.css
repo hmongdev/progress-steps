@@ -20,11 +20,15 @@ body {
     margin: 0;
 }
 
+/* all the elements in here are centered */
 .container {
     text-align: center;
+    border: 1px dashed red;
 }
 
+/* numbers on the progress bar */
 .progress-container {
+    border: 1px dashed red;
     display: flex;
     /* creates space between the numbers */
     justify-content: space-between;
@@ -34,10 +38,27 @@ body {
     margin-bottom: 2rem;
     /* take up the entire width */
     max-width: 100%;
-    border: 1px dashed red;
     /* make the width: */
     width: 350px;
-     
+}
 
-
+/* progress bar */
+.progress-bar {
+    /* color of the progress bar */
+    background-color: blue;
+    /* this is absolutely positioned relative to progress container */
+    position: absolute;
+    /* move progress bar to the center */
+    transform: translateY(-50%);
+    /* top is for vertically centering the progress bar */
+    top: 50%;
+    /* height determines the height of the progress bar */
+    height: 4px;
+    /* the width is what actually shows as the progress bar */
+    /* 0 means the progress bar starts at 0% out of 100% */
+    width: 0%;
+    /* make sure progress bar is BEHIND the circles */
+    z-index: -1;
+    /* when we click a button, we want it to transition */
+    transition: 0.4s ease;
 }
