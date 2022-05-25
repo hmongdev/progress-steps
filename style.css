@@ -134,3 +134,22 @@ body {
     /* spacing away from other elements */
     margin: 1rem;
 }
+
+/* when clicked or held, do this to the button */
+.btn:active {
+    transform: scale(.8);
+}
+
+/* after clicked/selected, hide the outline around the button */
+.btn:focus {
+    outline: none;
+}
+
+.btn:disabled {
+    /* set background to empty */
+    background-color: var(--line-border-empty);
+    /* don't animate // keep scale the same */
+    transform: scale(1);
+    /* don't allow this button to be clicked */
+    cursor: not-allowed;
+}
