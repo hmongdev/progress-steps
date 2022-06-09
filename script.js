@@ -6,17 +6,20 @@ const prev = $('#prev');
 const next = $('#next');
 const circles = $('.circle');
 
+console.log(circles);
+
 //counter for button
 let button = 1
-console.log(button);
 
-//condition
+//what happens when next button is clicked
 function ready() {
     $('#next').on('click', () => {
+        //increment button
         button++;
-        console.log(button);
+        //limits button to 4
         if (button >= circles.length) {
-            button = circles.length
+            button = circles.length;
         }
+        console.log(button);
     });
 }
