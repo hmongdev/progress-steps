@@ -11,8 +11,8 @@ console.log(circles);
 //counter for button
 let button = 1
 
-//what happens when next button is clicked
 function ready() {
+    //next button is clicked
     $('#next').on('click', () => {
         //increment button
         button++;
@@ -21,5 +21,14 @@ function ready() {
             button = circles.length;
         }
         console.log(button);
+    });
+    //prev button is clicked
+    $('#prev').on('click', () => {
+        //increment button
+        button--;
+        //limits button to 1
+        if (button <= 1) {
+            button = 1;
+        }
     });
 }
