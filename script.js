@@ -1,18 +1,21 @@
 //short-hand -- document.ready
 $(() => {
-    readyNow()
+    onReady()
 });
 
 //declaring variables by targeting id's
 const progress = $('#progress');
 const prev = $('#prev');
 const next = $('#next');
-const circles = $('.circle');
+//this is a nodeList, which is arrray-like but NOT an array
+const circlesNodeList = $('.circle');
+//convert nodelist into array
+const circles = Array.from(circlesNodeList);
 
 //counter for button
 let button = 1
 
-function readyNow() {
+const onReady = () => {
     //next button is clicked
     $('#next').on('click', () => {
         //increment button
@@ -21,7 +24,7 @@ function readyNow() {
         if (button >= circles.length) {
             button = circles.length;
         }
-        console.log(button);
+        update();
     });
 
     //prev button is clicked
@@ -32,6 +35,18 @@ function readyNow() {
         if (button <= 1) {
             button = 1;
         }
-        console.log(button);
+        update();
     });
+}
+
+function update() {
+    //forEach only works on arrays
+    //wasn't working because circles WAS a nodeList
+    circles.forEach((circle, index) => {
+        if (index < button) {
+            circle.classList.add('active');
+        } else {
+            circle.classList.remove('active');
+        }
+    })
 }
