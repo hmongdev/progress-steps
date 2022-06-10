@@ -61,12 +61,13 @@ const update = () => {
     })
 
     //2. Showing progress bar
-    //selects all active circles => shows progress bar wherever the circles are active
+    //2a. selects all active circles => shows progress bar wherever the circles are active
     const actives = $('.active')
+    //2b. Determine math for showing progress bar
     //length - 1 is added to make percentages 33% for each click
     //* 100 + % to create a percentage
     let progress = (actives.length - 1) / (circles.length - 1) * 100 + '%';
-    //jQuery that modifies the progress in CSS
+    //'progress' is necessary because in the final step, we use that to set the width in CSS
     $('#progress').css('width', progress);
 
     //3. Enabling the prev button
