@@ -40,6 +40,7 @@ const onReady = () => {
 }
 
 function update() {
+    //1. Filling circles
     //forEach only works on arrays
     //wasn't working because circles WAS a nodeList
     circles.forEach((circle, index) => {
@@ -49,4 +50,14 @@ function update() {
             circle.classList.remove('active');
         }
     })
+
+    //2. Showing progress bar
+    //selects all active circles
+    const actives = $('.active')
+    //CSS: interacts with progress bar!!! active / all circles
+    //length - 1 is added to make percentages 33% for each click
+    //* 100 + % to create a percentage
+    let progress = (actives.length - 1) / (circles.length - 1) * 100 + '%';
+    //jQuery that modifies the progress in CSS
+    $('#progress').css('width', progress);
 }
