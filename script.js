@@ -61,7 +61,7 @@ const update = () => {
     })
 
     //2. Showing progress bar
-    //selects all active circles
+    //selects all active circles => shows progress bar wherever the circles are active
     const actives = $('.active')
     //length - 1 is added to make percentages 33% for each click
     //* 100 + % to create a percentage
