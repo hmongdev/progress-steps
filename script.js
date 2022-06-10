@@ -1,3 +1,11 @@
+/* What I Learned in this Project (WILP)
+1. $('.circle') creates a nodeList NOT an array
+2. const array = Array.from(nodeList) converts into array
+3. forEach only works on arrays, which is why we needed to convert nodeList into array
+4. 
+
+*/
+
 //short-hand -- document.ready
 $(() => {
     onReady()
@@ -39,7 +47,7 @@ const onReady = () => {
     });
 }
 
-function update() {
+const update = () => {
     //1. Filling circles
     //forEach only works on arrays
     //wasn't working because circles WAS a nodeList
@@ -55,7 +63,6 @@ function update() {
     //2. Showing progress bar
     //selects all active circles
     const actives = $('.active')
-    //CSS: interacts with progress bar!!! active / all circles
     //length - 1 is added to make percentages 33% for each click
     //* 100 + % to create a percentage
     let progress = (actives.length - 1) / (circles.length - 1) * 100 + '%';
