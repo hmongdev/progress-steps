@@ -44,6 +44,7 @@ function update() {
     //forEach only works on arrays
     //wasn't working because circles WAS a nodeList
     circles.forEach((circle, index) => {
+        //condition where if the index is less than the button #, add active class
         if (index < button) {
             circle.classList.add('active');
         } else {
