@@ -16,7 +16,7 @@ const circles = Array.from(circlesNodeList);
 let button = 1
 
 const onReady = () => {
-    //next button is clicked
+    //next button will GO FORWARD
     $('#next').on('click', () => {
         //increment button
         button++;
@@ -27,7 +27,7 @@ const onReady = () => {
         update();
     });
 
-    //prev button is clicked
+    //prev button will GO BACKWARD
     $('#prev').on('click', () => {
         //increment button
         button--;
@@ -61,4 +61,13 @@ function update() {
     let progress = (actives.length - 1) / (circles.length - 1) * 100 + '%';
     //jQuery that modifies the progress in CSS
     $('#progress').css('width', progress);
+
+    //3. Enabling the prev button
+    //if button is at 1, disable the prev button
+    if (button === 1) {
+        $('#prev').attr('disabled', true);
+        //if button is NOT 1, enable the prev button
+    } else {
+        $('#prev').attr('disabled', false);
+    }
 }
