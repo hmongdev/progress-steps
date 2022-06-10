@@ -1,4 +1,7 @@
-$(document).ready(ready);
+//short-hand -- document.ready
+$(() => {
+    readyNow()
+});
 
 //declaring variables by targeting id's
 const progress = $('#progress');
@@ -6,12 +9,10 @@ const prev = $('#prev');
 const next = $('#next');
 const circles = $('.circle');
 
-console.log(circles);
-
 //counter for button
 let button = 1
 
-function ready() {
+function readyNow() {
     //next button is clicked
     $('#next').on('click', () => {
         //increment button
@@ -22,6 +23,7 @@ function ready() {
         }
         console.log(button);
     });
+
     //prev button is clicked
     $('#prev').on('click', () => {
         //increment button
@@ -30,5 +32,6 @@ function ready() {
         if (button <= 1) {
             button = 1;
         }
+        console.log(button);
     });
 }
