@@ -2,8 +2,8 @@
 1. $('.circle') creates a nodeList NOT an array
 2. const array = Array.from(nodeList) converts into array
 3. forEach only works on arrays, which is why we needed to convert nodeList into array
-4. 
-
+4. $('#progress').css('width', progress) => interacts with CSS directly
+5. $('#prev').attr('disabled', true) => interacts with HTML element directly
 */
 
 //short-hand -- document.ready
